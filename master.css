@@ -32,11 +32,8 @@ canvas {
 }
 
 #stuff {
-  z-index: 1000;
-  position: fixed;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 50%;
+  margin: 0 auto;
 }
 
 @font-face {
@@ -62,7 +59,6 @@ canvas {
     overflow:hidden;
     margin:0;
     padding:0;
-    display: inline-block
     list-style:none;
     left: 50%;
 }
