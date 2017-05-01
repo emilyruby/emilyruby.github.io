@@ -57,10 +57,10 @@ canvas {
 
 .soc {
     overflow:hidden;
-    margin:0;
+    margin:0 AUTO;
     padding:0;
     list-style:none;
-    left: 50%;
+    width: 50%;
 }
 
 .soc li {
