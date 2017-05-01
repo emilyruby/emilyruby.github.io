@@ -31,6 +31,14 @@ canvas {
   transform: translate(-50%, -50%);
 }
 
+#stuff {
+  z-index: 1000;
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @font-face {
     font-family: 'si';
     src: url('socicon-v1.5/socicon.eot');
