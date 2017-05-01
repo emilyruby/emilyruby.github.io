@@ -64,8 +64,6 @@ canvas {
     padding:0;
     list-style:none;
     left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
 }
 
 .soc li {
