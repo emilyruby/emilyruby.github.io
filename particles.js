@@ -1,3 +1,22 @@
+const pressed = [];
+const secret_code = "emily";
+const colours = ["#85C6D3", "#668586", "#AAABBC", "#F4989C", "#F2B79F"];
+
+function getRandomArbitrary(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+window.addEventListener('keyup', (e) => {
+  pressed.push(e.key);
+  pressed.splice(-secret_code.length -1, pressed.length - secret_code.length);
+  if (pressed.join('').includes(secret_code)) {
+    let index = getRandomArbitrary(1,colours.length);
+    console.log(index);
+    document.getElementById("particles-js").style.background = colours[index];
+  }
+  console.log(pressed);
+});
+
 particlesJS("particles-js", {
   "particles": {
     "number": {
