@@ -2,8 +2,6 @@ const pressed = [];
 const emily = "emily";
 const wil = "wil";
 const colours = ["#85C6D3", "#668586", "#AAABBC", "#F4989C", "#F2B79F"];
-var elem = document.createElement("img");
-elem.src = 'wil.jpg';
 
 function getRandomArbitrary(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
