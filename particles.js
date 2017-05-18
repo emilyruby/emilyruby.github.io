@@ -11,10 +11,8 @@ window.addEventListener('keyup', (e) => {
   pressed.splice(-secret_code.length -1, pressed.length - secret_code.length);
   if (pressed.join('').includes(secret_code)) {
     let index = getRandomArbitrary(1,colours.length);
-    console.log(index);
     document.getElementById("particles-js").style.background = colours[index];
   }
-  console.log(pressed);
 });
 
 particlesJS("particles-js", {
