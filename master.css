@@ -36,6 +36,16 @@ canvas {
   margin: 0 auto;
 }
 
+#where_wil {
+  font-size: 50px;
+  left: 50%;
+  color: #785964;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  text-wrap: none;
+  top: 55%;
+}
+
 @font-face {
     font-family: 'si';
     src: url('socicon-v1.5/socicon.eot');

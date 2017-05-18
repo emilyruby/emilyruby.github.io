@@ -1,6 +1,9 @@
 const pressed = [];
-const secret_code = "emily";
+const emily = "emily";
+const wil = "wil";
 const colours = ["#85C6D3", "#668586", "#AAABBC", "#F4989C", "#F2B79F"];
+var elem = document.createElement("img");
+elem.src = 'wil.jpg';
 
 function getRandomArbitrary(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
@@ -8,14 +11,23 @@ function getRandomArbitrary(min, max) {
 
 window.addEventListener('keyup', (e) => {
   pressed.push(e.key);
-  pressed.splice(-secret_code.length -1, pressed.length - secret_code.length);
-  if (pressed.join('').includes(secret_code)) {
+  pressed.splice(-emily.length -1, pressed.length - emily.length);
+  if (pressed.join('').includes(emily)) {
     let index = getRandomArbitrary(1,colours.length);
     document.getElementById("particles-js").style.background = colours[index];
   }
+  if (pressed.join('').includes(wil)) {
+    fetch('https://api.wilhelmklopp.com/location')
+      .then(data => data.json())
+      .then(data => {
+        console.log(data.location);
+        document.getElementById("where_wil").innerHTML = "wil in " + data.location;
+      })
+  }
+  console.log(pressed);
 });
 
-particlesJS("particles-js", {
+let particles = particlesJS("particles-js", {
   "particles": {
     "number": {
       "value": 100,
