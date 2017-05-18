@@ -1,6 +1,7 @@
 const pressed = [];
 const emily = "emily";
 const wil = "wil";
+const faiz = "faiz";
 const colours = ["#85C6D3", "#668586", "#AAABBC", "#F4989C", "#F2B79F"];
 
 function getRandomArbitrary(min, max) {
@@ -21,6 +22,9 @@ window.addEventListener('keyup', (e) => {
         console.log(data.location);
         document.getElementById("wil_stalker").innerHTML = "wil in " + data.location;
       })
+  }
+  if (pressed.join('').includes(faiz)) {
+    document.getElementById("wil_stalker").innerHTML = "💩";
   }
   console.log(pressed);
 });
