@@ -21,7 +21,7 @@ window.addEventListener('keyup', (e) => {
       .then(data => data.json())
       .then(data => {
         console.log(data.location);
-        document.getElementById("where_wil").innerHTML = "wil in " + data.location;
+        document.getElementById("wil_stalker").innerHTML = "wil in " + data.location;
       })
   }
   console.log(pressed);
